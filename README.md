@@ -31,3 +31,9 @@ This project automates a protein-ligand docking pipeline using **Snakemake**. Be
 
 10. **Convert to PDB Format**  
     Converts the docking pose to a PDB file for visualization.
+
+
+    
+## Setup Instructions
+
+If you try to set this up: don't
