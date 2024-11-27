@@ -1,0 +1,1 @@
+{"record_format_version": 5, "code": null, "rule": "extract_protein", "input": ["data/3LFA.pdb"], "log": [], "params": [], "shellcmd": null, "incomplete": false, "starttime": null, "endtime": 1732621585.2060442, "job_hash": 7809393026971, "conda_env": null, "software_stack_hash": "d41d8cd98f00b204e9800998ecf8427e", "container_img_url": null, "input_checksums": {}}

@@ -1,0 +1,76 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+combine_results          1
+download_pdb             3
+process_complexes        3
+total                    8
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Wed Nov 13 10:48:49 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/3xyz.pdb
+    jobid: 7
+    reason: Missing output files: data/3xyz.pdb
+    wildcards: pdb_code=3xyz
+    resources: tmpdir=/tmp
+
+[Wed Nov 13 10:48:49 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/1abc.pdb
+    jobid: 5
+    reason: Missing output files: data/1abc.pdb
+    wildcards: pdb_code=1abc
+    resources: tmpdir=/tmp
+
+[Wed Nov 13 10:48:49 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/7kk4.pdb
+    jobid: 3
+    reason: Missing output files: data/7kk4.pdb
+    wildcards: pdb_code=7kk4
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 14:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/.snakemake/scripts/tmp8lbetdvs.download_pdb.py' returned non-zero exit status 1.
+[Wed Nov 13 10:48:50 2024]
+Error in rule download_pdb:
+    jobid: 7
+    input: protein_ligand_codes.py
+    output: data/3xyz.pdb
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 14:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/.snakemake/scripts/tmp_14k18qw.download_pdb.py' returned non-zero exit status 1.
+[Wed Nov 13 10:48:50 2024]
+Error in rule download_pdb:
+    jobid: 3
+    input: protein_ligand_codes.py
+    output: data/7kk4.pdb
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 14:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/.snakemake/scripts/tmpdo8qa24m.download_pdb.py' returned non-zero exit status 1.
+[Wed Nov 13 10:48:50 2024]
+Error in rule download_pdb:
+    jobid: 5
+    input: protein_ligand_codes.py
+    output: data/1abc.pdb
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-13T104849.626575.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,92 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+compute_cavities            1
+extract_docking_pose        1
+extract_protein             1
+generate_cavity_box         1
+prepare_protein             1
+run_docking                 1
+total                       7
+
+Select jobs to execute...
+
+[Tue Nov 26 13:30:22 2024]
+rule extract_protein:
+    input: data/{config[pdb_code]}.pdb
+    output: data/{config[pdb_code]}_protein.pdb
+    jobid: 6
+    reason: Missing output files: data/{config[pdb_code]}_protein.pdb; Updated input files: data/{config[pdb_code]}.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:30:23 2024]
+Finished job 6.
+1 of 7 steps (14%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:30:23 2024]
+rule compute_cavities:
+    input: data/{config[pdb_code]}_protein.pdb
+    output: data/residues.json
+    jobid: 9
+    reason: Input files updated by another job: data/{config[pdb_code]}_protein.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:30:24 2024]
+Finished job 9.
+2 of 7 steps (29%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:30:24 2024]
+rule prepare_protein:
+    input: data/{config[pdb_code]}_protein.pdb
+    output: data/{config[pdb_code]}_protein.pdbqt
+    jobid: 5
+    reason: Missing output files: data/{config[pdb_code]}_protein.pdbqt; Input files updated by another job: data/{config[pdb_code]}_protein.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:30:26 2024]
+Finished job 5.
+3 of 7 steps (43%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:30:26 2024]
+rule generate_cavity_box:
+    input: data/residues.json, data/{config[pdb_code]}_protein.pdb
+    output: data/box.pdb
+    jobid: 8
+    reason: Missing output files: data/box.pdb; Input files updated by another job: data/residues.json, data/{config[pdb_code]}_protein.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:30:26 2024]
+Finished job 8.
+4 of 7 steps (57%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:30:26 2024]
+rule run_docking:
+    input: data/{config[ligand_code]}.pdbqt, data/{config[pdb_code]}_protein.pdbqt, data/box.pdb
+    output: results/output_vina.pdbqt
+    jobid: 2
+    reason: Missing output files: results/output_vina.pdbqt; Input files updated by another job: data/box.pdb, data/{config[pdb_code]}_protein.pdbqt
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:30:27 2024]
+Error in rule run_docking:
+    jobid: 2
+    input: data/{config[ligand_code]}.pdbqt, data/{config[pdb_code]}_protein.pdbqt, data/box.pdb
+    output: results/output_vina.pdbqt
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 77:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpes934el0.run_docking.py' returned non-zero exit status 1.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 77, in __rule_run_docking
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T133022.011204.snakemake.log

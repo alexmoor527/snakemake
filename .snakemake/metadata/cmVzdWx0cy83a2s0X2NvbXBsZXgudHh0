@@ -1,0 +1,1 @@
+{"record_format_version": 5, "code": null, "rule": "process_complexes", "input": ["data/7kk4.pdb"], "log": [], "params": [], "shellcmd": null, "incomplete": false, "starttime": null, "endtime": 1731491520.3860724, "job_hash": 8694569210201, "conda_env": null, "software_stack_hash": "d41d8cd98f00b204e9800998ecf8427e", "container_img_url": null, "input_checksums": {}}

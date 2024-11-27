@@ -1,0 +1,41 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+compute_cavities            1
+download_ligand             1
+extract_docking_pose        1
+extract_protein             1
+fetch_pdb                   1
+generate_cavity_box         1
+prepare_ligand              1
+prepare_protein             1
+run_docking                 1
+total                      10
+
+Select jobs to execute...
+
+[Tue Nov 26 13:06:28 2024]
+rule download_ligand:
+    output: data/{config[ligand_code]}.sdf
+    jobid: 4
+    reason: Missing output files: data/{config[ligand_code]}.sdf
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:06:29 2024]
+Error in rule download_ligand:
+    jobid: 4
+    output: data/{config[ligand_code]}.sdf
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 48:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmp441adbw5.download_ligand.py' returned non-zero exit status 1.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 48, in __rule_download_ligand
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T130628.314597.snakemake.log

@@ -1,0 +1,38 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+download_pdb        1
+total               1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Nov 13 10:56:33 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/7kk4.pdb
+    jobid: 0
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: <nothing exclusive> now: '09L' 
+    resources: tmpdir=/tmp
+
+[Wed Nov 13 10:56:33 2024]
+Error in rule download_pdb:
+    jobid: 0
+    input: protein_ligand_codes.py
+    output: data/7kk4.pdb
+    shell:
+        
+        python download_pdb.py --pdb 7kk4 --ligand 09L
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-13T105633.516753.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

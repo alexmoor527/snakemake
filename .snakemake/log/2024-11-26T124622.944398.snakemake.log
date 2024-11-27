@@ -1,0 +1,121 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+compute_cavities            1
+download_ligand             1
+extract_docking_pose        1
+extract_protein             1
+fetch_pdb                   1
+generate_cavity_box         1
+prepare_ligand              1
+prepare_protein             1
+run_docking                 1
+total                      10
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Nov 26 12:46:23 2024]
+localrule download_ligand:
+    output: data/1N1.sdf
+    jobid: 4
+    reason: Missing output files: data/1N1.sdf
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:23 2024]
+localrule fetch_pdb:
+    output: data/3LFA.pdb
+    jobid: 7
+    reason: Missing output files: data/3LFA.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:24 2024]
+Finished job 4.
+1 of 10 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:46:24 2024]
+localrule prepare_ligand:
+    input: data/1N1.sdf
+    output: data/1N1.pdbqt
+    jobid: 3
+    reason: Missing output files: data/1N1.pdbqt; Input files updated by another job: data/1N1.sdf
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:24 2024]
+Finished job 7.
+2 of 10 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:46:24 2024]
+localrule extract_protein:
+    input: data/3LFA.pdb
+    output: data/3LFA_protein.pdb
+    jobid: 6
+    reason: Missing output files: data/3LFA_protein.pdb; Input files updated by another job: data/3LFA.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:24 2024]
+Finished job 3.
+3 of 10 steps (30%) done
+[Tue Nov 26 12:46:25 2024]
+Finished job 6.
+4 of 10 steps (40%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Nov 26 12:46:25 2024]
+localrule compute_cavities:
+    input: data/3LFA_protein.pdb
+    output: data/residues.json
+    jobid: 9
+    reason: Missing output files: data/residues.json; Input files updated by another job: data/3LFA_protein.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:25 2024]
+localrule prepare_protein:
+    input: data/3LFA_protein.pdb
+    output: data/3LFA_protein.pdbqt
+    jobid: 5
+    reason: Missing output files: data/3LFA_protein.pdbqt; Input files updated by another job: data/3LFA_protein.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:46:25 2024]
+Finished job 9.
+5 of 10 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:46:25 2024]
+localrule generate_cavity_box:
+    input: data/residues.json
+    output: data/box.pdb
+    jobid: 8
+    reason: Missing output files: data/box.pdb; Input files updated by another job: data/residues.json
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 35:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpsp03lsfi.generate_cavity_box.py' returned non-zero exit status 1.
+[Tue Nov 26 12:46:25 2024]
+Error in rule generate_cavity_box:
+    jobid: 8
+    input: data/residues.json
+    output: data/box.pdb
+
+[Tue Nov 26 12:46:26 2024]
+Finished job 5.
+6 of 10 steps (60%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T124622.944398.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

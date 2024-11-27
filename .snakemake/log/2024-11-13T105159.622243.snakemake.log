@@ -1,0 +1,74 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+combine_results          1
+download_pdb             2
+process_complexes        3
+total                    7
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Wed Nov 13 10:51:59 2024]
+localrule process_complexes:
+    input: data/7kk4.pdb
+    output: results/7kk4_complex.txt
+    jobid: 2
+    reason: Missing output files: results/7kk4_complex.txt
+    wildcards: pdb_code=7kk4
+    resources: tmpdir=/tmp
+
+[Wed Nov 13 10:51:59 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/3xyz.pdb
+    jobid: 7
+    reason: Missing output files: data/3xyz.pdb
+    wildcards: pdb_code=3xyz
+    resources: tmpdir=/tmp
+
+[Wed Nov 13 10:51:59 2024]
+localrule download_pdb:
+    input: protein_ligand_codes.py
+    output: data/1abc.pdb
+    jobid: 5
+    reason: Missing output files: data/1abc.pdb
+    wildcards: pdb_code=1abc
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 15:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/.snakemake/scripts/tmpwu2eegll.download_pdb.py' returned non-zero exit status 1.
+[Wed Nov 13 10:52:00 2024]
+Error in rule download_pdb:
+    jobid: 7
+    input: protein_ligand_codes.py
+    output: data/3xyz.pdb
+
+Removing output files of failed job download_pdb since they might be corrupted:
+data/3xyz.pdb
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 15:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/.snakemake/scripts/tmpwh41iiaw.download_pdb.py' returned non-zero exit status 1.
+[Wed Nov 13 10:52:00 2024]
+Error in rule download_pdb:
+    jobid: 5
+    input: protein_ligand_codes.py
+    output: data/1abc.pdb
+
+Removing output files of failed job download_pdb since they might be corrupted:
+data/1abc.pdb
+[Wed Nov 13 10:52:00 2024]
+Finished job 2.
+1 of 7 steps (14%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-13T105159.622243.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

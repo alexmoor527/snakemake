@@ -1,0 +1,54 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+all                     1
+download_results        1
+process_results         1
+query_ebi_api           1
+total                   4
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:17:33 2024]
+localrule query_ebi_api:
+    input: input.json
+    output: api_results.json
+    jobid: 3
+    reason: Missing output files: api_results.json
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:17:34 2024]
+Finished job 3.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:17:34 2024]
+localrule download_results:
+    input: api_results.json
+    output: downloaded_data.txt
+    jobid: 2
+    reason: Missing output files: downloaded_data.txt; Input files updated by another job: api_results.json
+    resources: tmpdir=/tmp
+
+RuleException:
+WorkflowError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 27:
+Failed to open source file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/scripts/download_results.py
+FileNotFoundError: [Errno 2] No such file or directory: '/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/scripts/download_results.py'
+[Tue Nov 26 12:17:34 2024]
+Error in rule download_results:
+    jobid: 2
+    input: api_results.json
+    output: downloaded_data.txt
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T121733.311244.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

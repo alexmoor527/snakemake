@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+extract_docking_pose        1
+run_docking                 1
+total                       3
+
+Select jobs to execute...
+
+[Tue Nov 26 13:35:34 2024]
+rule run_docking:
+    input: data/{config[ligand_code]}.pdbqt, data/{config[pdb_code]}_protein.pdbqt, data/box.pdb
+    output: results/output_vina.pdbqt, results/output_vina.log
+    jobid: 2
+    reason: Missing output files: results/output_vina.pdbqt
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue Nov 26 13:36:07 2024]
+Error in rule run_docking:
+    jobid: 2
+    input: data/{config[ligand_code]}.pdbqt, data/{config[pdb_code]}_protein.pdbqt, data/box.pdb
+    output: results/output_vina.pdbqt, results/output_vina.log
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 80:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpg21x13i9.run_docking.py' died with <Signals.SIGINT: 2>.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 80, in __rule_run_docking
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Complete log: .snakemake/log/2024-11-26T133534.366621.snakemake.log

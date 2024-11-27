@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in rule all in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 4:
+Missing input files for rule all:
+    affected files:
+        results/output_structure.pdb

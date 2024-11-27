@@ -1,0 +1,49 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+extract_docking_pose        1
+run_docking                 1
+total                       3
+
+Select jobs to execute...
+
+[Tue Nov 26 13:38:17 2024]
+rule run_docking:
+    input: data/{config[ligand_code]}.pdbqt, data/{config[pdb_code]}_protein.pdbqt, data/box.pdb
+    output: results/output_vina.pdbqt, results/output_vina.log
+    jobid: 2
+    reason: Missing output files: results/output_vina.pdbqt
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:39:13 2024]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:39:13 2024]
+rule extract_docking_pose:
+    input: results/output_vina.pdbqt
+    output: results/output_structure.pdb
+    jobid: 1
+    reason: Missing output files: results/output_structure.pdb; Input files updated by another job: results/output_vina.pdbqt
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:39:13 2024]
+Error in rule extract_docking_pose:
+    jobid: 1
+    input: results/output_vina.pdbqt
+    output: results/output_structure.pdb
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 89:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpgjsy14mx.extract_docking_pose.py' returned non-zero exit status 1.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 89, in __rule_extract_docking_pose
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T133817.401060.snakemake.log

@@ -1,0 +1,6 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+MissingInputException in rule all in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 2:
+Missing input files for rule all:
+    affected files:
+        results/protein_ligand_complexes.txt

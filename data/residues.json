@@ -1,0 +1,360 @@
+{
+    "7kk4": [
+        {
+            "details": "binding site for residue 09L B 9001",
+            "evidence_code": "Software",
+            "ligand_residues": [
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9001,
+                    "chain_id": "B",
+                    "chem_comp_id": "09L",
+                    "entity_id": 2,
+                    "residue_number": 1,
+                    "struct_asym_id": "D"
+                }
+            ],
+            "site_id": "AC2",
+            "site_residues": [
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 988,
+                    "chain_id": "B",
+                    "chem_comp_id": "GLU",
+                    "entity_id": 1,
+                    "residue_number": 329,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 907,
+                    "chain_id": "B",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 248,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 904,
+                    "chain_id": "B",
+                    "chem_comp_id": "SER",
+                    "entity_id": 1,
+                    "residue_number": 245,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 710,
+                    "chain_id": "B",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 51,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 766,
+                    "chain_id": "B",
+                    "chem_comp_id": "ASP",
+                    "entity_id": 1,
+                    "residue_number": 107,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 769,
+                    "chain_id": "B",
+                    "chem_comp_id": "LEU",
+                    "entity_id": 1,
+                    "residue_number": 110,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 862,
+                    "chain_id": "B",
+                    "chem_comp_id": "HIS",
+                    "entity_id": 1,
+                    "residue_number": 203,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 863,
+                    "chain_id": "B",
+                    "chem_comp_id": "GLY",
+                    "entity_id": 1,
+                    "residue_number": 204,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 878,
+                    "chain_id": "B",
+                    "chem_comp_id": "ARG",
+                    "entity_id": 1,
+                    "residue_number": 219,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 889,
+                    "chain_id": "B",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 230,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 894,
+                    "chain_id": "B",
+                    "chem_comp_id": "GLY",
+                    "entity_id": 1,
+                    "residue_number": 235,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 895,
+                    "chain_id": "B",
+                    "chem_comp_id": "ILE",
+                    "entity_id": 1,
+                    "residue_number": 236,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 896,
+                    "chain_id": "B",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 237,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 897,
+                    "chain_id": "B",
+                    "chem_comp_id": "PHE",
+                    "entity_id": 1,
+                    "residue_number": 238,
+                    "struct_asym_id": "B",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9134,
+                    "chain_id": "B",
+                    "chem_comp_id": "HOH",
+                    "entity_id": 3,
+                    "residue_number": 34,
+                    "struct_asym_id": "F",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9111,
+                    "chain_id": "B",
+                    "chem_comp_id": "HOH",
+                    "entity_id": 3,
+                    "residue_number": 11,
+                    "struct_asym_id": "F",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9137,
+                    "chain_id": "B",
+                    "chem_comp_id": "HOH",
+                    "entity_id": 3,
+                    "residue_number": 37,
+                    "struct_asym_id": "F",
+                    "symmetry_symbol": "1_555"
+                }
+            ]
+        },
+        {
+            "details": "binding site for residue 09L A 9001",
+            "evidence_code": "Software",
+            "ligand_residues": [
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9001,
+                    "chain_id": "A",
+                    "chem_comp_id": "09L",
+                    "entity_id": 2,
+                    "residue_number": 1,
+                    "struct_asym_id": "C"
+                }
+            ],
+            "site_id": "AC1",
+            "site_residues": [
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 710,
+                    "chain_id": "A",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 51,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 766,
+                    "chain_id": "A",
+                    "chem_comp_id": "ASP",
+                    "entity_id": 1,
+                    "residue_number": 107,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 769,
+                    "chain_id": "A",
+                    "chem_comp_id": "LEU",
+                    "entity_id": 1,
+                    "residue_number": 110,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 862,
+                    "chain_id": "A",
+                    "chem_comp_id": "HIS",
+                    "entity_id": 1,
+                    "residue_number": 203,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 863,
+                    "chain_id": "A",
+                    "chem_comp_id": "GLY",
+                    "entity_id": 1,
+                    "residue_number": 204,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 878,
+                    "chain_id": "A",
+                    "chem_comp_id": "ARG",
+                    "entity_id": 1,
+                    "residue_number": 219,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 880,
+                    "chain_id": "A",
+                    "chem_comp_id": "ALA",
+                    "entity_id": 1,
+                    "residue_number": 221,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 889,
+                    "chain_id": "A",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 230,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 894,
+                    "chain_id": "A",
+                    "chem_comp_id": "GLY",
+                    "entity_id": 1,
+                    "residue_number": 235,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 895,
+                    "chain_id": "A",
+                    "chem_comp_id": "ILE",
+                    "entity_id": 1,
+                    "residue_number": 236,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 896,
+                    "chain_id": "A",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 237,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 897,
+                    "chain_id": "A",
+                    "chem_comp_id": "PHE",
+                    "entity_id": 1,
+                    "residue_number": 238,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 904,
+                    "chain_id": "A",
+                    "chem_comp_id": "SER",
+                    "entity_id": 1,
+                    "residue_number": 245,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 907,
+                    "chain_id": "A",
+                    "chem_comp_id": "TYR",
+                    "entity_id": 1,
+                    "residue_number": 248,
+                    "struct_asym_id": "A",
+                    "symmetry_symbol": "1_555"
+                },
+                {
+                    "author_insertion_code": null,
+                    "author_residue_number": 9123,
+                    "chain_id": "A",
+                    "chem_comp_id": "HOH",
+                    "entity_id": 3,
+                    "residue_number": 23,
+                    "struct_asym_id": "E",
+                    "symmetry_symbol": "1_555"
+                }
+            ]
+        }
+    ]
+}

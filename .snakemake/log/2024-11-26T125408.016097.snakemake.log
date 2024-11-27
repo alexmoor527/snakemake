@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+extract_docking_pose        1
+generate_cavity_box         1
+run_docking                 1
+total                       4
+
+Select jobs to execute...
+
+[Tue Nov 26 12:54:08 2024]
+rule generate_cavity_box:
+    input: data/residues.json
+    output: data/box.pdb
+    jobid: 8
+    reason: Missing output files: data/box.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 12:54:09 2024]
+Error in rule generate_cavity_box:
+    jobid: 8
+    input: data/residues.json
+    output: data/box.pdb
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 35:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmph12xifvx.generate_cavity_box.py' returned non-zero exit status 1.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 35, in __rule_generate_cavity_box
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T125408.016097.snakemake.log

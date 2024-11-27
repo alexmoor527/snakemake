@@ -1,0 +1,8 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+MissingInputException in rule download_pdb in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 7:
+Missing input files for rule download_pdb:
+    output: data/7kk4.pdb
+    wildcards: pdb_code=7kk4
+    affected files:
+        data/protein_ligand_codes.py

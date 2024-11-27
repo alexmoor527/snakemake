@@ -1,0 +1,80 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+compute_cavities            1
+download_ligand             1
+extract_docking_pose        1
+extract_protein             1
+fetch_pdb                   1
+generate_cavity_box         1
+prepare_ligand              1
+prepare_protein             1
+run_docking                 1
+total                      10
+
+Select jobs to execute...
+
+[Tue Nov 26 13:08:20 2024]
+rule download_ligand:
+    output: data/{config[ligand_code]}.sdf
+    jobid: 4
+    reason: Missing output files: data/{config[ligand_code]}.sdf
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:08:20 2024]
+Finished job 4.
+1 of 10 steps (10%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:08:20 2024]
+rule prepare_ligand:
+    input: data/{config[ligand_code]}.sdf
+    output: data/{config[ligand_code]}.pdbqt
+    jobid: 3
+    reason: Missing output files: data/{config[ligand_code]}.pdbqt; Input files updated by another job: data/{config[ligand_code]}.sdf
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:08:21 2024]
+Finished job 3.
+2 of 10 steps (20%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:08:21 2024]
+rule fetch_pdb:
+    output: data/{config[pdb_code]}.pdb
+    jobid: 7
+    reason: Missing output files: data/{config[pdb_code]}.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:08:21 2024]
+Finished job 7.
+3 of 10 steps (30%) done
+Select jobs to execute...
+
+[Tue Nov 26 13:08:21 2024]
+rule extract_protein:
+    input: data/{config[pdb_code]}.pdb
+    output: data/{config[pdb_code]}_protein.pdb
+    jobid: 6
+    reason: Missing output files: data/{config[pdb_code]}_protein.pdb; Input files updated by another job: data/{config[pdb_code]}.pdb
+    resources: tmpdir=/tmp
+
+[Tue Nov 26 13:08:21 2024]
+Error in rule extract_protein:
+    jobid: 6
+    input: data/{config[pdb_code]}.pdb
+    output: data/{config[pdb_code]}_protein.pdb
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 22:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/biobb_env/bin/python3.10 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpm4kvy6d9.extract_protein.py' returned non-zero exit status 1.
+  File "/home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile", line 22, in __rule_extract_protein
+  File "/home/alex/miniforge3/envs/biobb_env/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T130820.289132.snakemake.log

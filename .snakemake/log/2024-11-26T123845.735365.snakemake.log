@@ -1,0 +1,39 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+filter_ligands               1
+get_similar_compounds        1
+retrieve_compound_sdf        1
+total                        4
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Nov 26 12:38:45 2024]
+localrule filter_ligands:
+    input: data/3LFA_ligand.json
+    output: results/ligand_filter.json
+    jobid: 1
+    reason: Missing output files: results/ligand_filter.json
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/Snakefile, line 23:
+Command 'set -euo pipefail;  /home/alex/miniforge3/envs/snakemake-tutorial/bin/python3.12 /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project2/.snakemake/scripts/tmpfnzcdyc3.ebi_api_workflow.py' returned non-zero exit status 1.
+[Tue Nov 26 12:38:47 2024]
+Error in rule filter_ligands:
+    jobid: 1
+    input: data/3LFA_ligand.json
+    output: results/ligand_filter.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-11-26T123845.735365.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

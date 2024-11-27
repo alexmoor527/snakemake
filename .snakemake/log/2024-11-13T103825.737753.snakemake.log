@@ -1,0 +1,5 @@
+host: alex-IdeaPad-Flex-5-14ALC05
+Building DAG of jobs...
+WildcardError in rule process_complexes in file /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile, line 17:
+Wildcards in input files cannot be determined from output files: (rule process_complexes, line 37, /home/alex/Masters/Computer_and_Software_Architecture/Snakemake_Project/Snakefile)
+'pdb_code'
