@@ -1,35 +1,33 @@
-Snakemake Workflow: Protein-Ligand Docking Pipeline
+## Snakemake Workflow
 
-This repository contains a Snakemake workflow for automating a protein-ligand docking process. It fetches a protein structure, prepares it, identifies cavities, downloads and prepares a ligand, and performs docking using AutoDock Vina.
-Workflow Overview
-Workflow Steps:
+This project automates a protein-ligand docking pipeline using **Snakemake**. Below is a high-level overview of the rules in the workflow:
 
-    Fetch PDB Structure
-    Download the protein structure file in PDB format using a PDB code.
+1. **Fetch PDB Structure**  
+   Downloads the protein structure using the PDB code.
 
-    Extract Protein Structure
-    Extract the protein portion from the PDB file.
+2. **Extract Protein Structure**  
+   Extracts the protein-only portion of the PDB file.
 
-    Compute Cavities
-    Use the PDBe API to identify cavities within the protein.
+3. **Compute Cavities**  
+   Identifies cavities in the protein using the PDBe API.
 
-    Generate Cavity Box
-    Create a docking box around the identified cavity.
+4. **Generate Cavity Box**  
+   Creates a docking box around the identified cavity.
 
-    Download Ligand
-    Download the ligand structure file in SDF format using a ligand code.
+5. **Download Ligand**  
+   Downloads the ligand structure in SDF format using the ligand code.
 
-    Prepare Ligand for Docking
-    Convert and prepare the ligand file in PDBQT format.
+6. **Prepare Ligand for Docking**  
+   Converts and prepares the ligand file into PDBQT format.
 
-    Prepare Protein for Docking
-    Prepare the protein structure for docking in PDBQT format.
+7. **Prepare Protein for Docking**  
+   Prepares the protein structure into PDBQT format.
 
-    Run Docking
-    Perform docking using AutoDock Vina and save the results.
+8. **Run Docking**  
+   Performs docking using AutoDock Vina.
 
-    Extract Docking Pose
-    Extract the best docking pose from the docking results.
+9. **Extract Docking Pose**  
+   Extracts the best docking pose from the results.
 
-    Convert to PDB Format
-    Convert the docking pose to a PDB file for visualization.
+10. **Convert to PDB Format**  
+    Converts the docking pose to a PDB file for visualization.
